@@ -1,107 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css" />
-    <title>sai About us</title>
-      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-</head>
-<body class="body">
-    <div class="container">
-        <div class="navbar">
-            <div class="logo">
-                <a href="index.html">
-                <img src="images/sai-removebg-preview.png" alt="" / width="125px">
-            </a>
-            </div>
-            <nav>
-                <ul id="MenuItems">
-                    <li><a href="index.html" style="color: aqua;"><b>   Home</b></a></li>
-                    <li><a href="products.html" style="color: aqua;"><b>Products</b></a></li>
-                    <li><a href="aboutus.html" style="color: aqua;"><b>About us</b></a></li>
-                    <li><a href="contacts.html" style="color: aqua;"><b>Contacts</b></a></li>
-                    <li><a href="account.html" style="color: aqua;"><b>Account</b></a></li>
-                </ul>
-            </nav>
-            <a  href="cart.html">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sai Shop - About Us</title>
 
-                <img src="images/cart.png" alt="" width="30px" height="30px" />
-            </a>
-            <img src="images/menu.png" alt="" class="menu-icon" onclick="menutoggle()">
-        </div>
-    </div>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 
-    <div class="row">
-        <div class="col-2">
-            <h1>About us</h1>
-            <p class="p2">Hello and welcome to <i class="i">sai shop</i>, the place to find the best clothes,electronics for every taste and occasion.
-                We thoroughly check the quality of our goods, working only with reliable suppliers so that you only receive the best
-                quality product.</p> <br>
-           
-                <p class="p2">We at <i class="i">sai shop</i> believe in high quality and exceptional customer service. But most importantly, we believe shopping 
-                is a right, not a luxury, so we strive to deliver the best products at the most affordableprices, and ship them to you
-                 regardless of where you are located.
-               </p>
-        </div>
-        <div class="col-2">
-            <img src="images/image_about-removebg-preview.png" alt="" />
-        </div>
-    </div>
-
-<div class="footer">
-    <div class="container">
-        <div class="row">
-            <div class="footer-col-1">
-                <h3>Download our App</h3>
-                <p>Download App for Andriod and ios mobile phone.</p>
-                <div class="app-logo">
-                    <img src="images/play-store.png" alt="">
-                    <img src="images/app-store.png" alt="">
-                </div>
-            </div>
-            <div class="footer-col-2">
-                <img src="images/sai-removebg-preview.png" alt="">
-                <p>Our purpose is to give the best quality product to the customer and bring them back and make them
-                    happy.</p>
-            </div>
-            <div class="footer-col-3">
-                <h3>Useful Links</h3>
-                <ul>
-                    <li>Coupons</li>
-                    <li>Blog Post</li>
-                    <li>Return Policy</li>
-                    <li>Join Affiliate</li>
-                </ul>
-            </div>
-            <div class="footer-col-4">
-                <h3>Follow Us</h3>
-                <ul>
-                    <li>Facebook</li>
-                    <li>Twitter</li>
-                    <li>Instagram</li>
-                    <li>Youtube</li>
-                </ul>
-            </div>
-        </div>
-        <hr>
-        <p class="copyright">Copyright &copy; 2020 - www.nilara.com</p>
-    </div>
-</div>
-<script>
-    var MenuItems = document.getElementById("MenuItems");
-
-    MenuItems.style.maxHeight = "0px";
-
-    function menutoggle() {
-        if (MenuItems.style.maxHeight == "0px") {
-            MenuItems.style.maxHeight = "200px";
-        }
-        else {
-            MenuItems.style.maxHeight = "0px";
-        }
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f8f9fa;
     }
-</script>
+
+    .about-heading {
+      font-weight: 700;
+      font-size: 2.5rem;
+    }
+
+    .footer {
+      background: #111;
+      color: #ccc;
+      padding: 50px 0;
+    }
+
+    .footer h5 {
+      color: #fff;
+      margin-bottom: 20px;
+    }
+
+    .footer ul {
+      padding-left: 0;
+      list-style: none;
+    }
+
+    .footer ul li {
+      margin-bottom: 10px;
+    }
+
+    .app-logo img {
+      width: 120px;
+      margin-right: 10px;
+    }
+
+    .testimonial-card {
+      border: none;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .testimonial-card .card-body {
+      padding: 2rem;
+    }
+
+    .testimonial-img {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-right: 15px;
+    }
+
+    .copyright {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light py-3 shadow-sm fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <img src="images/sai-removebg-preview.png" alt="Sai Logo" height="40">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="products.html">Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="aboutus.html">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contacts.html">Contacts</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="account.html">Account</a>
+        </li>
+      </ul>
+      <a href="cart.html" class="ms-3">
+        <img src="images/cart.png" alt="Cart" width="30" height="30">
+      </a>
+    </div>
+  </div>
+</nav>
+
+  <!-- About Section -->
+  <section class="py-5">
+    <div class="container py-5">
+      <div class="row align-items-center">
+        <div class="col-md-6 mb-4 mb-md-0">
+          <h1 class="about-heading">About Us</h1>
+          <p class="lead">Hello and welcome to <strong>sai shop</strong>, your trusted destination for top-quality clothes and electronics for every style and need.</p>
+          <p>We carefully choose our suppliers to bring you only the best products. Our mission is to provide exceptional customer service and ensure that shopping is a joy, not a luxury.</p>
+        </div>
+        <div class="col-md-6 text-center">
+          <img src="images/image_about-removebg-preview.png" alt="About Us" class="img-fluid" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-5">What Our Clients Say</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card testimonial-card">
+            <div class="card-body">
+              <p>"Fantastic service and amazing quality! I’ve bought clothes and gadgets — all top-notch."</p>
+              <div class="d-flex align-items-center mt-4">
+                <img src="images/user-1.jpg" alt="User" class="testimonial-img" />
+                <div>
+                  <h6 class="mb-0">Vanteru Manohar</h6>
+                  <small>Verified Buyer</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card testimonial-card">
+            <div class="card-body">
+              <p>"Comfortable fit and stylish! Slight color bleed on first wash, but still worth the price."</p>
+              <div class="d-flex align-items-center mt-4">
+                <img src="images/user4.png" alt="User" class="testimonial-img" />
+                <div>
+                  <h6 class="mb-0">Shaik Shafi</h6>
+                  <small>Frequent Shopper</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card testimonial-card">
+            <div class="card-body">
+              <p>"Good quality bag with anti-theft design and USB cable — a great deal for the price!"</p>
+              <div class="d-flex align-items-center mt-4">
+                <img src="images/user-3.jpg" alt="User" class="testimonial-img" />
+                <div>
+                  <h6 class="mb-0">Jeevan Kumar</h6>
+                  <small>Amazon Reviewer</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 mb-4">
+          <h3>Download our App</h3>
+          <p>Download App for Android and iOS mobile phones.</p>
+          <div class="app-logo d-flex">
+            <img src="images/play-store.png" alt="Play Store">
+            <img src="images/app-store.png" alt="App Store">
+          </div>
+        </div>
+        <div class="col-md-3 mb-4 text-center">
+          <img src="images/sai-removebg-preview.png" alt="Logo" width="100" class="mb-3">
+          <p>Our purpose is to give the best quality product to the customer and bring them back and make them happy.</p>
+        </div>
+        <div class="col-md-3 mb-4">
+          <h3>Useful Links</h3>
+          <ul>
+            <li>Coupons</li>
+            <li>Blog Post</li>
+            <li>Return Policy</li>
+            <li>Join Affiliate</li>
+          </ul>
+        </div>
+        <div class="col-md-3 mb-4">
+          <h3>Follow Us</h3>
+          <ul>
+            <li>Facebook</li>
+            <li>Twitter</li>
+            <li>Instagram</li>
+            <li>Youtube</li>
+          </ul>
+        </div>
+      </div>
+      <hr class="border-light">
+      <p class="text-center mb-0">&copy; 2020 - www.nilara.com</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

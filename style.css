@@ -1,4 +1,4 @@
-*{
+/* *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -762,4 +762,4 @@ input[type="email"] {
 .button input[type="button"]:hover {
     background-color: #0056b3;
 }
-
+ */
